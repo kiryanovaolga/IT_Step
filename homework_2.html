@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h2 class="subtitle">Výsledek</h2>
+  <input class="inp_language" type="text" placeholder="IT Language">
+  <input class="inp_place" type="text" placeholder="Place">
+  <button class="btn" vaue="submit" name="">Přihlasit se</button>
+
+
+
+  <script defer>
+
+
+
+
+    let subTitle = document.getElementsByClassName('subtitle')[0];
+    let inpLang = document.getElementsByClassName('inp_language')[0];
+    let inpPlace = document.getElementsByClassName('inp_place')[0];
+
+    let button1 = document.getElementsByClassName('btn')[0].onclick =
+      function () {
+        if (inpLang.value === "JS" || inpLang.value === "Phyton" && inpPlace.value === "Praha") {
+          subTitle.textContent = "Jste přijat!";
+          subTitle.style.color = "green";
+          inpLang.value = "";
+          inpPlace.value = "";
+        } else {
+          subTitle.textContent = "Bohužel...";
+          subTitle.style.color = "red";
+          inpLang.value = "";
+          inpPlace.value = "";
+        }
+      };
+
+
+
+
+  </script>
+
+</body>
+
+</html>
