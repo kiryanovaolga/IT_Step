@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    let obrazky = [
+      'https://picsum.photos/seed/a/200/300',
+      'https://picsum.photos/seed/b/200/300',
+      'https://picsum.photos/seed/c/200/300',
+      'https://picsum.photos/seed/d/200/300',
+      'https://picsum.photos/seed/e/200/300',
+    ];
+
+    let divElement = document.createElement('div');
+    document.body.appendChild(divElement);
+
+    for (let index = 0; index < obrazky.length; index++) {
+      let imgElement = document.createElement('img');
+      imgElement.src = obrazky[index];
+      divElement.appendChild(imgElement);
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>
