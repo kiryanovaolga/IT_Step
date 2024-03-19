@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <div class="tabs is-boxed is-centered">
+    <ul>
+      <li class="item is-active"><a>Pictures</a></li>
+      <li class="item"><a>Music</a></li>
+      <li class="item"><a>Videos</a></li>
+      <li class="item"><a>Documents</a></li>
+    </ul>
+  </div>
+
+
+  <script>
+
+    let items = document.querySelectorAll('.item');
+
+    for (let i = 0; i < items.length; i++) {
+      items[i].onclick = function () {
+        for (let i = 0; i < items.length; i++) {
+          items[i].classList.remove('is-active')
+        }
+        items[i].classList.add('is-active')
+      }
+    }
+
+
+    /* for (let i = 0; i < items.length; i++) {
+          items[i].addEventListener('click', function () {
+            open(items[i]);
+          });
+        }
+    
+        function open(item) {
+          for (let i = 0; i < items.length; i++) {
+            items[i].classList.remove('is-active');
+          }
+          item.classList.add('is-active');
+        }*/
+
+  </script>
+</body>
