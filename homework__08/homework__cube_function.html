@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+
+
+    function createCube(size) {
+      let cubeElement = document.createElement('div');
+      document.body.appendChild(cubeElement);
+      cubeElement.style.width = size + 'px';
+      cubeElement.style.height = size + 'px';
+      return cubeElement;
+    }
+    let myCube = createCube(100)
+
+
+
+
+    function colorCube(cube, color) {
+      cube.style.background = color;
+    }
+    colorCube(myCube, 'blue');
+
+
+
+    function addBorderRadius(cube, radius) {
+      cube.style.borderRadius = radius + 'px'
+    }
+    addBorderRadius(myCube, 10)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+
+    class Cube {
+      constructor(element, size, color, borderRadius) {
+        this.element = element;
+        this.height = size;
+        this.width = size;
+        this.color = color;
+        this.borderRadius = borderRadius;
+      }
+      createCube() {
+        let cube = document.createElement(this.element);
+        cube.style.width = this.width + 'px';
+        cube.style.height = this.height + 'px';
+        cube.style.borderRadius = this.borderRadius + 'px';
+        cube.style.backgroundColor = this.color;
+        document.body.appendChild(cube);
+        return cube;
+      }
+    }
+    let cube = new Cube('div', 200, 'blue', 10);
+    cube.createCube();
+  </script>
+</body>
+
+</html>
