@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    class Clovek {
+      constructor(jmeno, prijmeni, vek) {
+        this.jmeno = jmeno;
+        this.prijmeni = prijmeni;
+        this.vek = vek;
+      }
+      predstavSe() {
+        console.log('Ahoj jsem ' + this.jmeno + ' ' + this.prijmeni + ' a je mi ' + this.vek)
+      }
+    }
+
+    let jana = new Clovek('Jana', 'Nová', 20);
+    jana.predstavSe()
+    let petr = new Clovek('Petr', 'Nový', 40);
+    petr.predstavSe()
+
+
+  </script>
+</body>
+
+</html>
