@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="" alt="" width="300" height="300">
+
+
+  <select>
+    <option value="">žádný obrázek</option>
+    <option value="https://picsum.photos/id/235/300/300">Obrázek č. 235</option>
+    <option value="https://picsum.photos/id/236/300/300">Obrázek č. 236</option>
+    <option value="https://picsum.photos/id/237/300/300">Obrázek č. 237</option>
+    <option value="https://picsum.photos/id/238/300/300">Obrázek č. 238</option>
+  </select>
+
+  <hr>
+  <hr>
+
+  <h2>jQuery Wiki text</h2>
+  <p>jQuery je javascriptová knihovna s širokou podporou prohlížečů, která klade důraz na interakci mezi JavaScriptem a
+    HTML.</p>
+  <p>Byla vydána Johnem Resigem v lednu 2006 na newyorském BarCampu.</p>
+  <p>jQuery je svobodný a otevřený software pod licencí MIT.</p>
+
+  <input type="color" id="color1">
+  <input type="color" id="color2">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+
+    $('select').on('change', function (event) {
+      $('img').attr('src', $(this).val());
+    })
+
+    $('#color1').on('change', function (event) {
+      $('h2').css('color', $(this).val());
+    });
+
+
+    $('#color2').on('change', function (event) {
+      $('p').css('color', $(this).val());
+    });
+  </script>
+</body>
+
+</html>
