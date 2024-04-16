@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div id="mapa-lidi" style="height: 300px; background-color: antiquewhite;"></div>
+
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+  <script>
+
+    let mapa = L.map('mapa-lidi').setView([50, 14], 0);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mapa);
+
+    let dataUrl = 'https://jsonplaceholder.typicode.com/users';
+
+    fetch(dataUrl)
+      .then(function (responce) {
+        return responce.json();
+      })
+      .then(function (data) {
+        console.log(data);
+
+        for (let item of data) {
+          let div = document.createElement('div');
+          let name = document.createElement('h2');
+          name.textContent = item.name;
+
+          let email = document.createElement('p');
+          email.textContent = item.email;
+
+          let companyName = document.createElement('p');
+          companyName = item.company.name;
+
+          div.append(name, email, companyName);
+          document.body.append(div);
+
+        }
+      })
+
+  </script>
+</body>
